@@ -30,7 +30,7 @@ const data = [
     {
       question: "Qual é o primeiro animal a ser invocado pelo jutsu de invocação?",
       options: ["Cachorro", "Sapo", "Cobra", "Gato"],
-      answer: "Cacccho",
+      answer: "Cachorro",
     },  
     {
       question:
