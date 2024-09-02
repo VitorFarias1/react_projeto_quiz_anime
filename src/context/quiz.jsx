@@ -9,6 +9,7 @@ const initialState = {
     currentQuestion: 0,
     score: 0,
     answerSelected: false,
+    selectedOption: null,
 }
 
 const quizReducer = (state, action) => {
@@ -61,6 +62,13 @@ const quizReducer = (state, action) => {
                 score: state.score + correctAnswer,
                 answerSelected: option,
             }
+
+            case "SELECTED_OPTION":
+                return {
+                    ...state,
+                    selectedOption: action.payload,
+                    answerSelected: true
+                }
 
         default:
             return state;

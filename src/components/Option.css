@@ -27,5 +27,6 @@
 }
 
 .wrong {
-    background-color: #f00;
+    background-color: #d00;
+    font-weight: bold;
 }

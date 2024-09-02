@@ -12,19 +12,18 @@ const Question = () => {
     const onSelectOption = (option) => {
         dispatch({
             type: "CHECK_ANSWER",
-            payload: {answer: currentQuestion.answer, option},
+            payload: {answer: currentQuestion.answer, option}
         })
     }
-
   return (
     <div id="question">
         <p>Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
         <h2>{currentQuestion.question}</h2>
         <div id="options-container">
-            {currentQuestion.options.map((option) => (
+            {currentQuestion.options.map((option, index) => (
                 <Option 
                 option={option} 
-                key={option} 
+                key={index} 
                 answer={currentQuestion.answer}
                 selectOption={() => onSelectOption(option)}/>
             ))}
